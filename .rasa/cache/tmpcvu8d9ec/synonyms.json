@@ -1,0 +1,12 @@
+{
+  "https://my-bucket.s3.amazonaws.com/image.jpg": "//my-bucket.s3.amazonaws.com/image.jpg",
+  "//my-bucket.s3.amazonaws.com/image.jpg": "//my-bucket.s3.amazonaws.com/image.jpg",
+  "https://my-bucket.s3.amazonaws.com/image.png": "//my-bucket.s3.amazonaws.com/image.png",
+  "//my-bucket.s3.amazonaws.com/image.png": "//my-bucket.s3.amazonaws.com/image.png",
+  "https://my-bucket.s3.amazonaws.com/pic.jpg": "//my-bucket.s3.amazonaws.com/pic.jpg",
+  "//my-bucket.s3.amazonaws.com/pic.jpg": "//my-bucket.s3.amazonaws.com/pic.jpg",
+  "https://my-bucket.s3.amazonaws.com/photo.jpeg": "//my-bucket.s3.amazonaws.com/photo.jpeg",
+  "//my-bucket.s3.amazonaws.com/photo.jpeg": "//my-bucket.s3.amazonaws.com/photo.jpeg",
+  "https://s3.amazonaws.com/your-bucket/your-image.png": "//s3.amazonaws.com/your-bucket/your-image.png",
+  "//s3.amazonaws.com/your-bucket/your-image.png": "//s3.amazonaws.com/your-bucket/your-image.png"
+}

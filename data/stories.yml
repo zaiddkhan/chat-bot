@@ -1,0 +1,33 @@
+version: "3.1"
+
+
+stories:
+- story: Detect image from S3
+  steps:
+     - intent: detect_s3_image_url
+     - action: action_check_google_receipt
+- story: Check user subscription
+  steps:
+  - intent: subscription_issue
+  - action: action_check_subscription
+
+
+- story: User mentions course name in query
+  steps:
+  - intent: iap_course_detection
+  - action: action_extract_course
+  - slot_was_set:
+    - course_name: true
+  - action: action_handle_course_issue
+
+- story: User does not mention course name
+  steps:
+  - intent: iap_course_detection
+  - action: action_extract_course
+  - slot_was_set:
+    - course_name: null
+  - action: utter_ask_course_name
+  - intent: provide_course_name
+  - slot_was_set:
+    - course_name: true
+  - action: action_handle_course_issue

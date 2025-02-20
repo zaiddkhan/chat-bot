@@ -1,0 +1,39 @@
+version: "3.1"
+
+intents:
+  - subscription_issue
+  - bot_challenge
+  - detect_s3_image_url
+  - provide_course_name
+  - iap_course_detection
+
+responses:
+  utter_subscription_issue:
+  - text: "What are you facing?"
+  utter_ask_course_name:
+  - text: "Which course did you purchase?"
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+actions:
+  - action_check_subscription
+  - action_check_google_receipt
+  - action_extract_course
+  - action_handle_course_issue
+
+slots:
+  course_name:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: course_name
+
+
+entities:
+  - course_name
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

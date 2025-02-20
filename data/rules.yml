@@ -1,0 +1,14 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: subscription_issue
+  - action: action_check_subscription
+
+- rule: Check for subscription
+  steps:
+  - intent: detect_s3_image_url
+  - action: action_check_google_receipt
+

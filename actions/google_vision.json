@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "levelgameapp-1625484789369",
+  "private_key_id": "11dc652ab605c288096244b253c15d8b2f7aa9d6",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQCxEN2B3Dkk22MX\n8l2pzQ9hfuV5yr3jDhnE1qVE6PQnsX78dBkdyurxcTtmRiyQ+W9x7Cj0y2Vb9RAA\nb/daIGEb1OK3g2mYdqlxGjFVqtZfo0n/D4bRpvlgkjPDpEthzxCOAvWfa9DAJIYa\n8KdfBU+j53FsvX6Fb8WZ0SrXGzTw0CsZOsMcvUtr/eG4IwfSDACPBG+NMXIMuD1P\nhCD3k6TcPkxZ3ErZoUAun5Wteq+ioZQGV3vjGXHmLSjxfOSh6GRKz6tHT31NFakS\nA6YfGGxhaXP+FguJP6faYodF0E5Ihn1oYsgAcHmaKb7FD+7xJ+adr/pFePGGctCE\n05SAOyWVAgMBAAECggEAIY+KiIla/GknyltqFNvU6TwR1yiOHrnmuPgdKadE1bwv\nDz8bHpo+N0aoxU0SN+VLUgq6xZFCtDAKGScfuUGvXkTWtwVNr7P4EEOwa6YejVCI\nHzPMcDLni/4SGSgsEI0cfGpDr3SSQ8T4dSU9eAVr76tXxI5TK4wAplOuvMg/m8/r\nbTGof6+9mKqqcsFffzUDj53SgnzndOSZeujoNQejTfNjBLQUP/yhr92AbCThjAJa\nlqXFqxpvwDXer/KhPXaRPDXdPUsohpdPmz1pnw2p8tO6+R7ryi/RwJIaHPpYGFPa\nSRC090hxUbWJ7i8U3MDegB33AySYepW+NCKGfXehGQKBgQD3B1TOc6arlQcfeYXd\n3ntuPj5MjC4E8zAl4f7fquKV7yj1nd5rNfY5sn9+4greytcRbjvhza9GGqCrcH8q\n0QMn5MYtrM5ym4byOmmz+8/WZV2YpWhdeb1MQmiva8GE3lBySsvjCv9ENzTofUlz\ngpHFHQr3TlRNH48OoffntRaVXQKBgQC3fxPyJj9DwWGAMxD18WPoAqCDK2XIqNHb\n42AgIsVckZiT39A0eZeRHIgeDmzesxlH6kYPbHMXtriMnTFzWhQCV6kFWMDMqmYy\nr5QIr047krB5tYjWh4DAZQSc3Ku7s4IVTFIN8fS+Uz1jYBlPDxxFCwT0RNozLr2y\nZqiH+HRVmQKBgQDxlP3fGUM6MfhRU6sTG+1iFwUeH0kyFhJUOfvkCV6mesl3yvgl\nqRQvwNzm3XD8CSrjJQbzARAUYx4WC2KSIO4RKa6WJJWRh4Ali/KrzeuoJGGwUrMK\nF3CFD70JMTyEEFZkL7nNRIf30nWvmDco+9xLBOggiz3uXpqtGME0nOiFEQKBgQCH\njROR9RkVF1zMVGz6EhkIgjBK1Zs6ESP9+MjA1I7RJCj/S/3FVfFWXCpdcbCRDuLl\nEjYxHJ8k7HEGRvUJzogrdtBAR+EdD9+xH60OgVocfe9p6WWtfKnq9nTi38zpOuEk\nlJ2k+ZEfq+QUbiAkG/h5NHuzas15s9SkXluvHiXqOQKBgQDIXe9jf++pjRraufLb\nsGXj3V9umqd6fWscWmkQ5hMVjTMvgDqDP/2JWDpc1GDCzcqYtFf1gbCBjEMkMTmo\n817v7ylluTW4v7dZAD+8Pq4U1LB3u5bSM0lh3fdVEtruNy0K/vxGGBdechDDqkml\n05D1o5OmRFE44OLrznQ7hMr2wQ==\n-----END PRIVATE KEY-----\n",
+  "client_email": "level-core-backend@levelgameapp-1625484789369.iam.gserviceaccount.com",
+  "client_id": "118112046523794287997",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/level-core-backend%40levelgameapp-1625484789369.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

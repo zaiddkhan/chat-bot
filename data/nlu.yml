@@ -1,0 +1,88 @@
+version: "3.1"
+
+
+nlu:
+- intent: subscription_issue
+  examples: |
+    - Can you please check the premium subscription was paid but I don't see the update in my app
+    - I’m writing this mail to raise a complaint about subscription plan. I have already subscribed for annual premium plan but it’s not reflecting on the app.
+    - I have done the payment i have received mail form you even then im not able to access my premium
+    - I have paid for a premium membership and yet i am not able to access premium content. Kindly look into this at the earliest.
+    - Please let me know if any details are required from me for your verification. Happy to help.
+    - Hello I have been charged twice for subscription and its not applied to my account yet
+    - I have an active premium plan which still has expiry till next December. But I am not able to play my continued day 4 meditation and it asks for me to renew.
+    - My app is not updated after subscribing to premium unable to access the content. Very disappointing I was looking forward to my morning meditation. Please look into this
+    - I still don’t see the premium subscription activated on my account even after the payment.
+    - I purchased the monthly subscription but wasn’t able to use any premium content, then I purchased annual subscription but still unable to access any premium features in my account.
+    - I just purchased the premium level plan for 12 months. But it still isn't showing on the app. Please activate it.
+    - I see that I have paid for the premium subscription dated 16/12/24 via google pay, I’ll attach the screenshot as well for your reference.
+    - However, Im unable to access the premium features in my app.
+    - Why isn’t my premium membership working despite of making annual subscription payment. Can someone please help me on this.
+    - I have purchased the premium, but its not reflecting in my account, still asking me for upgrade. Please advise else refund back the money.
+    - I have purchased annual subscription for the application, still i am unable to use premium features. On the manage subscription page it still shows me as freemium.
+    - Last night I did subscription for monthly with 299rs. Still, it’s not reflecting in my app and I’m unable to access any of the music or meditation.
+    - Attached payment screenshot for your reference. Kindly fix this for me or else do the refund.
+    - I recently purchased the Annual Premium Subscription on your platform, but I am facing issues with accessing the content. Despite the payment being successfully processed, the subscription benefits are not reflected on my account. Additionally, the platform is prompting me to pay again to access the premium features.
+    - I’ve purchased the premium plan on 2nd of January (at 1:37 PM) for 1799/-
+    - But today I couldn’t access the guided meditation I’ve been doing for the past 3 days
+    - I am user Gautham007 and had paid the annual subscription fee today for the premium user. But my account is still showing as free user. Can you please check and change this to premium? Attached the subscription details from my Apple account.
+    - I have already purchased premium, still not able to get access to premium content
+    - I have purchased the yearly premium membership but still i am not able access all the stuff, please fix asap
+    - I have purchased the premium yearly subscription. However the app is not updated kindly look into this
+    - I don’t know if it’s a technical issue or not but I have bought a month of premium subscription and still haven’t been able to access the premium services.
+    - I have all the proofs required
+    - My payment mode was upi and registered number is 8329901018
+    - Please resolve it ASAP
+    - I have updated to premium membership but it doesnt reflect on the app and i cannot access the content
+    - Registered with my email Id vidya.pulla@gmail.com
+    - It doesnt reflect i am a premium member
+    - This is to bring to your notice that I am unable to continue my meditation after just 4 days into it due to some glitch as it redirects me to get the premium membership even when I already am one.
+    - Hey It's showing that my Level Super mind premium has ended but It already got paid on 9 January then why it's showing not a premium membership please help me out
+    - Paid 299 for 1 month on 1 January 2025
+    - But unable to have access to any video
+    - Apple subscription is showing the membership untill 1 Feb
+    - But app is not showing any memberships
+    - I took the premium subscription of 1299/- on 25th Dec 2024. But looks like the plan is still not activated in my account.
+    - Could you please help me with the issue.
+    - I have paid for premium account but my app is still showing freemium.
+
+
+- intent: detect_s3_image_url
+  examples: |
+      - I have an image stored in S3 at [https://my-bucket.s3.amazonaws.com/image.jpg](https://my-bucket.s3.amazonaws.com/image.jpg)
+      - Can you check the image at [https://my-bucket.s3.amazonaws.com/image.png](https://my-bucket.s3.amazonaws.com/image.png)?
+      - The URL for my image is [https://my-bucket.s3.amazonaws.com/pic.jpg](https://my-bucket.s3.amazonaws.com/pic.jpg)
+      - I have an image in S3, here's the link: [https://my-bucket.s3.amazonaws.com/photo.jpeg](https://my-bucket.s3.amazonaws.com/photo.jpeg)
+      - Check the S3 image at [https://s3.amazonaws.com/your-bucket/your-image.png](https://s3.amazonaws.com/your-bucket/your-image.png)
+
+- intent: iap_course_detection
+  examples: |
+    -  took the [overthink](course_name) by paying ₹29 and the money also got deducted from Apple subscription, but whenever I am trying trying in application use of the session go through the session overthink that one it is still asking me pay ₹29. I killed the application and reopen still, I am facing the same difficulties.
+    - I have made a payment for [spirituality](course_name) on 25th Jan but I am not able to access any of the resources. Please help with the same at the earliest. 
+    - I bought [stress relief](course_name) today for ₹29 which was valid for 7 days but it is not working.
+    - I purchased 7 days course of 29 rs.. How can I get access of it? In app they show for pay again.. Your team doesn't responding.. 
+    - Recently bought your [beginners meditation](course_name) by Ranveer which was priced at 29 rupees for 7 days. I bought it for 14.5 as there was a new year coupon I guess but couldn't use it after completing the transaction, then I paid 29 rupees this time and still couldn't use it. Really disappointed because even after paying the amount for the same course twice still couldn't use it. Really heard a lot of good things about the app from my friends but after using it I'm not as pleased with it as I thought I would be please look into it.
+    - Paid 29 rupees for [rajarshi nandi](course_name). But I couldn't able to get it. 
+    - I purchased 1 time [overthinking course](course_name) for Rs 29, but it does not show as bought and I am not able to use it. Please tell where is my Rs29 spent on.
+    - I have paid 29 Rs for [spiritual kit](course_name) and I am not getting access to it when I am opening it.
+    - Hi, I paid for [bhairav sadhna](course_name) for 1 week Rs. 29 yesterday and I'm not able to access it now. 
+    - I've purchased Rs 29 course on [stress management](course_name) but it's not activated yet.
+
+- intent: provide_course_name
+  examples: |
+    - The course name is [spirituality pack](course_name).
+    - I purchased the [stress relief course](course_name).
+    - It's the [beginners meditation](course_name) course.
+    - I paid for the [overthink session](course_name).
+    - I bought the [Rajarshi Nandi course](course_name).
+    - The course name is [anxiety relief](course_name).
+
+    
+
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?

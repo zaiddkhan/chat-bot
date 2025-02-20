@@ -1,0 +1,23 @@
+{
+  "https://my-bucket.s3.amazonaws.com/image.jpg": "//my-bucket.s3.amazonaws.com/image.jpg",
+  "//my-bucket.s3.amazonaws.com/image.jpg": "//my-bucket.s3.amazonaws.com/image.jpg",
+  "https://my-bucket.s3.amazonaws.com/image.png": "//my-bucket.s3.amazonaws.com/image.png",
+  "//my-bucket.s3.amazonaws.com/image.png": "//my-bucket.s3.amazonaws.com/image.png",
+  "https://my-bucket.s3.amazonaws.com/pic.jpg": "//my-bucket.s3.amazonaws.com/pic.jpg",
+  "//my-bucket.s3.amazonaws.com/pic.jpg": "//my-bucket.s3.amazonaws.com/pic.jpg",
+  "https://my-bucket.s3.amazonaws.com/photo.jpeg": "//my-bucket.s3.amazonaws.com/photo.jpeg",
+  "//my-bucket.s3.amazonaws.com/photo.jpeg": "//my-bucket.s3.amazonaws.com/photo.jpeg",
+  "https://s3.amazonaws.com/your-bucket/your-image.png": "//s3.amazonaws.com/your-bucket/your-image.png",
+  "//s3.amazonaws.com/your-bucket/your-image.png": "//s3.amazonaws.com/your-bucket/your-image.png",
+  "overthink course": "overthink course",
+  "spirituality pack": "spirituality pack",
+  "stress relief course": "stress relief course",
+  "beginners meditation": "beginners meditation",
+  "rajarshi nandi course": "rajarshi nandi course",
+  "overthinking course": "overthinking course",
+  "spiritual kit": "spiritual kit",
+  "bhairav sadhna": "bhairav sadhna",
+  "stress management": "stress management",
+  "overthink session": "overthink session",
+  "anxiety relief": "anxiety relief"
+}
