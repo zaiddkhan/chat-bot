@@ -8,9 +8,18 @@ stories:
      - action: action_check_google_receipt
 - story: Check user subscription
   steps:
-  - intent: subscription_issue
+  - intent: premium_not_accessible_without_image
   - action: action_check_subscription
 
+- story: Wants to cancel their subscription
+  steps:
+    - intent: confirm_cancel_subscription
+    - action: action_cancel_subscription
+
+- story: Wants to refund the subscription
+  steps:
+    - intent: aggressive_refund
+    - action: action_refund_subscription
 
 - story: User mentions course name in query
   steps:

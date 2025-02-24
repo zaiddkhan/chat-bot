@@ -6,7 +6,63 @@ import os
 os.environ['GOOGLE_APPLICATION_CREDENTIALS'] ='./actions/google_vision.json'
 from google.cloud import vision
 import  re
-from datetime import datetime
+from datetime import datetime, timedelta
+import jwt
+
+
+class ActionsRefundSubscription(Action):
+    def name(self) -> Text:
+        return "action_refund_subscription"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]] :
+        user_email = tracker.get_slot("email")
+        user_contact_number = tracker.get_slot("number")
+        user_uuid = tracker.get_slot("uuid")
+
+        print("refunddd")
+
+        api_url = f"https://level-core-backend.api.level.game/v1/refundSubscription"
+        payload = {
+            "email": user_email,
+            "contact_number": user_contact_number,
+            "uuid": user_uuid,
+            "exp": datetime.utcnow() + timedelta(hours=1)
+        }
+        token = jwt.encode(payload, "LVB97M-lKA1-bGcwNLRYXySuThn3pTYKZIN9CRYsBvY", algorithm="HS256")
+        print(token)
+
+        headers = {
+            "Authorization": f"auth {token}",
+            "Content-Type": "application/json"
+        }
+
+
+class ActionCancelSubscription(Action):
+    def name(self) -> Text:
+        return "action_cancel_subscription"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]] :
+        user_email = tracker.get_slot("email")
+        user_contact_number = tracker.get_slot("number")
+        user_uuid = tracker.get_slot("uuid")
+
+        print("cancellll")
+
+        api_url = f"https://level-core-backend.api.level.game/v1/cancelSubscription"
+        payload = {
+            "email": user_email,
+            "contact_number": user_contact_number,
+            "uuid": user_uuid,
+            "exp": datetime.utcnow() + timedelta(hours=1)
+        }
+        token = jwt.encode(payload, "LVB97M-lKA1-bGcwNLRYXySuThn3pTYKZIN9CRYsBvY", algorithm="HS256")
+        print(token)
+
+        headers = {
+            "Authorization": f"auth {token}",
+            "Content-Type": "application/json"
+        }
+
 
 
 class ActionRunGoogleReceiptDetection(Action):
@@ -97,23 +153,30 @@ class ActionCheckSubscription(Action):
         return "action_check_subscription"
 
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        # Extract user details (e.g., email or user_id) from slots or tracker
-        # user_email = tracker.get_slot("email")  # Assuming you store user email in a slot
-        #
-        # if not user_email:
-        #     dispatcher.utter_message(text="I couldn't find your email. Could you please provide it?")
-        #     return []
-
+        user_email = tracker.get_slot("email")
+        user_contact_number = tracker.get_slot("number")
+        user_uuid = tracker.get_slot("uuid")
         api_url = f"https://level-core-backend.api.level.game/v1/checkForSubscription"
+        payload = {
+            "email": user_email,
+            "contact_number": user_contact_number,
+            "uuid": user_uuid,
+            "exp": datetime.utcnow() + timedelta(hours=1)
+        }
+        token = jwt.encode(payload, "LVB97M-lKA1-bGcwNLRYXySuThn3pTYKZIN9CRYsBvY", algorithm="HS256")
+        print(token)
 
-        # Headers including Authorization
         headers = {
-            "Authorization": "auth eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImxlYW5uZXBpbGxheTE5ODJAZ21haWwuY29tIiwiYXV0aF90b2tlbiI6ImV5SmhiR2NpT2lKSVV6STFOaUlzSW5SNWNDSTZJa3BYVkNKOS5leUoxZFdsa0lqb2laamN5WldJd05EZ3RPVFprTUMweE1XVm1MV0ZqWW1JdE1EWXdNRGd3Wm1aak5EZGtJaXdpYVdGMElqb3hOek0wTnpZd01USTBmUS5NSWkyb1VQSWZxMVdmY2tuWXRfbnZRTERVQU9ybExrMll0bFg3R0tLMDBZIiwidmVyc2lvbl9jb2RlIjo0NzUsInBsYXRmb3JtIjoiQW5kcm9pZCIsInVzZXJfaW50ZW50IjoyLCJkZXZpY2VfdHlwZSI6MCwiZGF5c19hZnRlcl9vbmJvYXJkaW5nIjo1MiwiaXNfZnJvbV9jb3Vyc2VfYWQiOmZhbHNlLCJpc19mcm9tX2lhcCI6ZmFsc2UsInBhZ2UiOjB9.LveBrNnlkZXgXKIwvR7gwUbj6Y71xqPbGMjE6qK7H5k",
+            "Authorization": f"auth {token}",
             "Content-Type": "application/json"
         }
 
         # Make the GET request with headers
         response = requests.get(api_url, headers=headers)
+        print(response.json())
+        if not user_email:
+            dispatcher.utter_message(text="I couldn't find your email. Could you please provide it?")
+            return []
 
         if response.status_code == 200:
             data = response.json()
@@ -122,9 +185,11 @@ class ActionCheckSubscription(Action):
             if data.get("id") == 1 and "data" in data and len(data["data"]) > 0:
                 subscription = data["data"][0]  # Get the first subscription record
 
+
                 premium_ends_on = subscription.get("premium_ends_on", "unknown date")
                 plan_type = subscription.get("plan_type", "a premium")
 
+                # Structuring the reply message
                 dispatcher.utter_message(
                     text=f"Your {plan_type} premium subscription is active until {premium_ends_on}. "
                          "Try logging out and logging in again if you face issues."

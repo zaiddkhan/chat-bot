@@ -4,11 +4,23 @@ rules:
 
 - rule: Say goodbye anytime the user says goodbye
   steps:
-  - intent: subscription_issue
+  - intent: premium_not_accessible_without_image
   - action: action_check_subscription
+
 
 - rule: Check for subscription
   steps:
   - intent: detect_s3_image_url
   - action: action_check_google_receipt
 
+- rule: Cancel Subscription
+  steps:
+    - intent : confirm_cancel_subscription
+    - action : action_cancel_subscription
+
+
+
+- rule: Refund Subscription
+  steps:
+    - intent: aggressive_refund
+    - action: action_refund_subscription

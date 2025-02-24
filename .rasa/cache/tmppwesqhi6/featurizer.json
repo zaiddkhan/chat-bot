@@ -1,0 +1,63 @@
+{
+  "type": "MaxHistoryTrackerFeaturizer",
+  "state_featurizer": {
+    "action_texts": [],
+    "entity_tag_specs": [],
+    "feature_states": {
+      "intent": {
+        "aggressive_refund": 0,
+        "asking_for_refund": 1,
+        "back": 2,
+        "bot_challenge": 3,
+        "confirm_cancel_subscription": 4,
+        "detect_s3_image_url": 5,
+        "how_cancel_subscription": 6,
+        "iap_course_detection": 7,
+        "nlu_fallback": 8,
+        "out_of_scope": 9,
+        "premium_not_accessible_without_image": 10,
+        "provide_course_name": 11,
+        "restart": 12,
+        "session_start": 13
+      },
+      "action_name": {
+        "action_listen": 0,
+        "action_restart": 1,
+        "action_session_start": 2,
+        "action_default_fallback": 3,
+        "action_deactivate_loop": 4,
+        "action_revert_fallback_events": 5,
+        "action_default_ask_affirmation": 6,
+        "action_default_ask_rephrase": 7,
+        "action_two_stage_fallback": 8,
+        "action_unlikely_intent": 9,
+        "action_back": 10,
+        "...": 11,
+        "action_extract_slots": 12,
+        "action_check_subscription": 13,
+        "action_check_google_receipt": 14,
+        "action_extract_course": 15,
+        "action_handle_course_issue": 16,
+        "action_cancel_subscription": 17,
+        "action_refund_subscription": 18,
+        "utter_ask_course_name": 19,
+        "utter_asking_for_refund": 20,
+        "utter_how_to_cancel": 21,
+        "utter_iamabot": 22,
+        "utter_premium_not_accessible_without_image": 23
+      },
+      "entities": {
+        "course_name": 0,
+        "email": 1,
+        "number": 2,
+        "uuid": 3
+      },
+      "slots": {
+        "course_name_0": 0
+      },
+      "active_loop": {}
+    }
+  },
+  "remove_duplicates": true,
+  "max_history": 5
+}

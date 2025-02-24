@@ -1,27 +1,46 @@
 version: "3.1"
 
 intents:
-  - subscription_issue
+  - premium_not_accessible_without_image
   - bot_challenge
   - detect_s3_image_url
   - provide_course_name
   - iap_course_detection
+  - aggressive_refund
+  - asking_for_refund
+  - confirm_cancel_subscription
+  - how_cancel_subscription
 
 responses:
-  utter_subscription_issue:
-  - text: "What are you facing?"
+  utter_premium_not_accessible_without_image:
+    - text: "What are you facing?"
   utter_ask_course_name:
-  - text: "Which course did you purchase?"
+    - text: "Which course did you purchase?"
   utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+    - text: "I am a bot, powered by Rasa."
+  utter_how_to_cancel:
+    - text: "Here are the steps to cancel a subscription:"
+  utter_asking_for_refund:
+    - text: "Here are the steps to get a refund"
 
 actions:
   - action_check_subscription
   - action_check_google_receipt
   - action_extract_course
   - action_handle_course_issue
+  - action_cancel_subscription
+  - action_refund_subscription
+
+
 
 slots:
+  email:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: email
+
   course_name:
     type: text
     influence_conversation: true
@@ -29,10 +48,11 @@ slots:
       - type: from_entity
         entity: course_name
 
-
 entities:
   - course_name
-
+  - email
+  - number
+  - uuid
 
 session_config:
   session_expiration_time: 60

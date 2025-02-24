@@ -1,0 +1,52 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-email",
+      "2": "I-email",
+      "3": "L-email",
+      "4": "U-email",
+      "5": "B-image_url",
+      "6": "I-image_url",
+      "7": "L-image_url",
+      "8": "U-image_url",
+      "9": "B-name",
+      "10": "I-name",
+      "11": "L-name",
+      "12": "U-name",
+      "13": "B-number",
+      "14": "I-number",
+      "15": "L-number",
+      "16": "U-number",
+      "17": "B-uuid",
+      "18": "I-uuid",
+      "19": "L-uuid",
+      "20": "U-uuid",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-email": 1,
+      "I-email": 2,
+      "L-email": 3,
+      "U-email": 4,
+      "B-image_url": 5,
+      "I-image_url": 6,
+      "L-image_url": 7,
+      "U-image_url": 8,
+      "B-name": 9,
+      "I-name": 10,
+      "L-name": 11,
+      "U-name": 12,
+      "B-number": 13,
+      "I-number": 14,
+      "L-number": 15,
+      "U-number": 16,
+      "B-uuid": 17,
+      "I-uuid": 18,
+      "L-uuid": 19,
+      "U-uuid": 20,
+      "O": 0
+    },
+    "num_tags": 21
+  }
+]
